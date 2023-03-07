@@ -29,7 +29,8 @@ export class MainComponent {
   altura:any = 0;
   idade:any = 0;
   nivelAtividade:any = "";
-  resultado = 0;
+  resultadoSemEx = 0;
+  resultado:any = 0;
 
   selecaoSexo($event:any) {
     this.sexo = $event.target.value;
@@ -39,8 +40,6 @@ export class MainComponent {
     let pesocalc = 13.7 * parseFloat(this.peso);
     let alturacalc = 5 * parseFloat(this.altura);
     let idadecalc = 6.8 * parseFloat(this.idade);
-
-    console.log(pesocalc, alturacalc, idadecalc);
 
     if (this.sexo == 'M') {
       this.resultado = 66 + (13.7 * this.peso) + (5 * this.altura) - (6.8 * this.idade);
@@ -53,8 +52,9 @@ export class MainComponent {
       this.resultado = 0;
     }
     else {
-
+      this.resultadoSemEx = this.resultado;
       this.resultado = this.resultado * this.nivelAtividade;
+
     }
 
   }
