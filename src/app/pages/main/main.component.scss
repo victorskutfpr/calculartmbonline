@@ -1,0 +1,84 @@
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    gap: 20px;
+
+    &>.sexo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        &>span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        &>label
+        {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            align-self: flex-start;
+            font-size: 18px;
+        }
+    }
+
+    &>label {
+        &>input {
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            outline: none;
+            padding: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            // disable the default arrow
+            appearance: none;
+
+        }
+    }
+
+    &>.nivel-atividade {
+        &>select {
+            height: 35px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+    }
+
+    &>button {
+        padding: 15px 30px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(194, 236, 194);
+        }
+    }
+
+    &>.resultado {
+        margin: 50px;
+        text-align: center;
+        background-color: rgb(194, 236, 194);
+        padding: 20px 100px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+}

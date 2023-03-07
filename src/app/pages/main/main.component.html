@@ -1,0 +1,40 @@
+<section>
+    <h1>calculadora de taxa de metabolismo basal (TMB)</h1>
+    <div class="sexo">
+        <span>sexo</span>
+        <label for="">
+            <input type="radio" name="sexo" value="M" checked (change)="selecaoSexo($event)">
+            <span>masculino</span>
+        </label>
+        <label for="">
+            <input type="radio" name="sexo" value="F" (change)="selecaoSexo($event)">
+            <span>feminino</span>
+        </label>
+    </div>
+    <label for="">
+        <span>peso(kg): </span>
+        <input type="number" name="" id="" [(ngModel)]="peso">
+    </label>
+    <label for="">
+        <span>altura(cm): </span>
+        <input type="number" name="" id="" [(ngModel)]="altura">
+    </label>
+    <label for="">
+        <span>idade: </span>
+        <input type="number" name="" id="" [(ngModel)]="idade">
+    </label>
+    <div class="nivel-atividade">
+        <select name="" id="" [(ngModel)]="nivelAtividade">
+            <option value="" disabled selected>Selecione nivel de atividade</option>
+            <ng-container *ngFor="let item of opcoes">
+                <option [value]="item.value">{{item.viewValue}}</option>
+            </ng-container>
+        </select>
+    </div>
+
+    <button (click)="calcular()">Calcular</button>
+
+    <div class="resultado">
+        <span>resultado: <br><br>{{resultado.toFixed(2)}} cal</span>
+    </div>
+</section>
